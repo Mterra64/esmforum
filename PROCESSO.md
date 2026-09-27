@@ -1,5 +1,9 @@
 # Processo ágil — Parte 1
 
+## Contexto temporal da entrega
+
+Os enunciados previam entregas separadas ao fim das semanas 3, 6 e 9. Por restrição de tempo, as Partes 1, 2 e 3 foram produzidas e publicadas juntas em 27/09/2026. A sequência aplicada foi lógica e verificável nos commits — ambiente e planejamento, requisitos e UML, implementação da busca, análise de padrões e arquitetura —, sem alegar três ciclos semanais efetivamente transcorridos ou submissões nas datas originais. O GitHub Project registra o estado atual das funcionalidades; seu histórico não substitui evidência de entregas graduais anteriores.
+
 ## Escolha: Kanban
 
 O projeto é pequeno, didático e feito por uma pessoa. Kanban permite visualizar o trabalho, puxar uma tarefa por vez e limitar o trabalho em andamento sem simular cerimônias ou sprints de uma equipe inexistente. O fluxo é contínuo: uma funcionalidade entra no backlog, fica pronta para execução, é implementada, revisada e concluída. A revisão exige código testado e documentação atualizada. O quadro é [Projeto Final ES1 — ESM Forum](https://github.com/users/Mterra64/projects/5).

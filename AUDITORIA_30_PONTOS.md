@@ -2,6 +2,8 @@
 
 Esta é uma conferência de evidências, não uma previsão de nota. A avaliação final pertence ao professor. Código de busca, testes e diagramas foram verificados localmente; links públicos devem ser conferidos após os commits e o envio aos forks.
 
+**Ressalva de prazo:** os enunciados distribuíam as entregas pelas semanas 3, 6 e 9, mas os três conjuntos foram preparados e publicados de uma vez em 27/09/2026. A tabela avalia cobertura técnica da rubrica, não comprova cumprimento dos prazos nem da cadência gradual prevista. Uma eventual penalidade por atraso ou entrega conjunta depende das regras da disciplina.
+
 | Parte | Critério / peso | Evidência |
 |---|---:|---|
 | 1 | Ambiente — 1,0 | Dois forks; `INSTALACAO.md`; backend e frontend executados |
