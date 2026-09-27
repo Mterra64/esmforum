@@ -1,0 +1,14 @@
+flowchart TD
+  I([Início]) --> D[Digitar palavra-chave]
+  D --> V{Campo vazio?}
+  V -- Sim --> L[Carregar lista completa]
+  V -- Não --> R[Enviar requisição de busca]
+  R --> E{API disponível?}
+  E -- Não --> A[Exibir aviso]
+  E -- Sim --> C{Há resultados?}
+  C -- Sim --> P[Exibir perguntas e contagens]
+  C -- Não --> N[Exibir estado vazio]
+  L --> F([Fim])
+  A --> F
+  P --> F
+  N --> F

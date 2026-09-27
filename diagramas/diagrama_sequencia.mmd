@@ -1,0 +1,22 @@
+sequenceDiagram
+  actor Visitante
+  participant Frontend
+  participant API
+  participant ServicoBusca
+  participant Repositorio
+  participant SQLite
+  Visitante->>Frontend: Digita palavra e clica Buscar
+  Frontend->>API: GET /?q=palavra
+  API->>ServicoBusca: buscar(palavra)
+  ServicoBusca->>ServicoBusca: valida e normaliza
+  ServicoBusca->>Repositorio: buscar(criterio, palavra)
+  Repositorio->>SQLite: SELECT parametrizado
+  SQLite-->>Repositorio: perguntas e contagem
+  Repositorio-->>ServicoBusca: resultados
+  ServicoBusca-->>API: resultados
+  API-->>Frontend: HTTP 200 + JSON
+  alt existem resultados
+    Frontend-->>Visitante: Exibe perguntas
+  else lista vazia
+    Frontend-->>Visitante: Nenhuma pergunta encontrada
+  end

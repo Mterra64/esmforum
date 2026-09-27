@@ -1,0 +1,9 @@
+stateDiagram-v2
+  [*] --> NaoCriada
+  NaoCriada --> Publicada: cadastrar pergunta
+  Publicada --> Respondida: cadastrar primeira resposta
+  Respondida --> Respondida: cadastrar outra resposta
+  Publicada --> Publicada: buscar ou votar
+  Respondida --> Respondida: buscar ou votar
+  note right of Publicada: Estado lógico do domínio proposto
+  note right of Respondida: Estado derivado de respostas existentes
