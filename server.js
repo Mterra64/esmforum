@@ -1,7 +1,10 @@
 const express = require('express')
 const modelo = require('./modelo.js');
+const { ServicoBusca } = require('./busca/servicoBusca');
+const { RepositorioPerguntasSqlite } = require('./busca/repositorioSqlite');
 
 const app = express()
+const busca = new ServicoBusca(new RepositorioPerguntasSqlite());
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -13,11 +16,13 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
   try {
-    const perguntas = modelo.listar_perguntas();
+    const perguntas = req.query.q === undefined
+      ? modelo.listar_perguntas()
+      : busca.buscar(req.query.q);
     res.send(perguntas);
   }
   catch(erro) {
-    res.status(500).json(erro.message); 
+    res.status(erro instanceof TypeError || erro instanceof RangeError ? 400 : 500).json(erro.message);
   }
 });
 
