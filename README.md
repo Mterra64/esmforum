@@ -1,5 +1,7 @@
 # ESM Forum
 
+> **Projeto Final ES1:** este fork reúne as Partes 1, 2 e 3. Veja [INSTALACAO.md](INSTALACAO.md), [PROCESSO.md](PROCESSO.md), [HISTORIAS.md](HISTORIAS.md), [DIAGRAMAS_PARTE2.md](DIAGRAMAS_PARTE2.md), [IMPLEMENTACAO_SOLID.md](IMPLEMENTACAO_SOLID.md), [PADROES_PROPOSTOS.md](PADROES_PROPOSTOS.md), [ARQUITETURA.md](ARQUITETURA.md) e [PROPOSTA_ARQUITETURA.md](PROPOSTA_ARQUITETURA.md). O frontend está no [fork React](https://github.com/Mterra64/esmforum-react) e o planejamento no [GitHub Project](https://github.com/users/Mterra64/projects/5).
+
 O **ESM Forum** é um sistema minimalista de demonstração do livro [Engenharia de Software Moderna](https://engsoftmoderna.info). 
 Ele é um fórum simples de perguntas e respostas. O objetivo é permitir que os alunos tenham um primeiro contato prático com os conceitos estudados no livro. Ou seja:
 

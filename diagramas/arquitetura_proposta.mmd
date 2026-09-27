@@ -1,0 +1,22 @@
+flowchart LR
+  Browser[React SPA] -->|HTTP JSON| Routes[Rotas Express]
+  subgraph Apresentacao
+    Routes --> BuscaController[BuscaController]
+    Routes --> VotoController[VotoController]
+    BuscaView[BuscaJSONView]
+    VotoView[VotoJSONView]
+  end
+  subgraph Negocio
+    BuscaController --> BuscaService[ServicoBusca]
+    VotoController --> VotoService[ServicoVoto]
+  end
+  subgraph Dados
+    BuscaService --> PerguntaRepo[RepositorioPerguntas]
+    VotoService --> VotoRepo[RepositorioVotos]
+    PerguntaRepo --> SQLite[(SQLite)]
+    VotoRepo --> SQLite
+  end
+  BuscaController --> BuscaView
+  VotoController --> VotoView
+  BuscaView -->|JSON| Browser
+  VotoView -->|JSON| Browser

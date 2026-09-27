@@ -1,0 +1,24 @@
+classDiagram
+  class ServicoBusca {
+    -repositorio
+    -criterio
+    +buscar(termo)
+  }
+  class CriterioBusca {
+    <<interface>>
+    +consulta(termo)
+  }
+  class CriterioTexto {
+    +consulta(termo)
+  }
+  class CriterioTag {
+    +consulta(termo)
+  }
+  class RepositorioPerguntas {
+    <<interface>>
+    +buscar(criterio, termo)
+  }
+  ServicoBusca --> CriterioBusca
+  ServicoBusca --> RepositorioPerguntas
+  CriterioBusca <|.. CriterioTexto
+  CriterioBusca <|.. CriterioTag

@@ -1,0 +1,14 @@
+flowchart LR
+  subgraph Apresentacao
+    React[React: páginas Pergunta e Resposta]
+  end
+  subgraph Backend
+    Express[server.js: rotas Express]
+    Modelo[modelo.js: regras e consultas]
+    BDUtils[bd_utils.js: acesso SQLite]
+  end
+  SQLite[(esmforum.db)]
+  React -->|HTTP JSON| Express
+  Express --> Modelo
+  Modelo --> BDUtils
+  BDUtils --> SQLite

@@ -1,0 +1,20 @@
+classDiagram
+  class PerfilFacade {
+    +obterHistorico(idUsuario)
+  }
+  class UsuarioRepositorio {
+    +obter(idUsuario)
+  }
+  class PerguntaRepositorio {
+    +listarPorAutor(idUsuario)
+  }
+  class RespostaRepositorio {
+    +listarPorAutor(idUsuario)
+  }
+  class PerfilController {
+    +getPerfil(request)
+  }
+  PerfilController --> PerfilFacade
+  PerfilFacade --> UsuarioRepositorio
+  PerfilFacade --> PerguntaRepositorio
+  PerfilFacade --> RespostaRepositorio

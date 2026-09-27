@@ -1,0 +1,23 @@
+classDiagram
+  class EventoRespostaCriada {
+    +idPergunta
+    +idResposta
+  }
+  class PublicadorEventos {
+    +inscrever(observador)
+    +publicar(evento)
+  }
+  class ObservadorResposta {
+    <<interface>>
+    +atualizar(evento)
+  }
+  class NotificadorAutor {
+    +atualizar(evento)
+  }
+  class AuditoriaResposta {
+    +atualizar(evento)
+  }
+  PublicadorEventos --> EventoRespostaCriada
+  PublicadorEventos --> ObservadorResposta
+  ObservadorResposta <|.. NotificadorAutor
+  ObservadorResposta <|.. AuditoriaResposta
